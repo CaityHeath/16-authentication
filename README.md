@@ -6,41 +6,62 @@
 ### Author: Caity Heath and Tanner Seramur 
 
 ### Links and Resources
-* [repo](https://github.com/CaityHeath/16-authentication)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [Repository](https://github.com/CaityHeath/16-authentication)
+* [Travis](https://www.travis-ci.com/CaityHeath/16-authentication)
 
-#### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+#### Auth 
+* middleware.js
+* router.js
+* users-model.js
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### Middleware
+* 404.js
+* error.js
 
-###### `bar(array) -> array`
-Usage Notes or examples
+#### Routes
+* book.js
+
+#### Server
+* app.js
+* index.js
+
+
 
 ### Setup
+#### Install node modules
+* run the following code to install the necessary node modules:
+`npm i `
+
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT=3000`
+* `MONGODB_URI=mongodb://localhost:27017/store`
+
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
+* `npm start` or `nodemon` will start the server
+* to sign up run the following while your server is running: 
+`echo '{"username":"_your_username_","password":"_your_password_"} | http POST :3000/signup`
+
+* To sign in run the following command in terminal while your serer is running: 
+`http post :3000/signin -a _your_username:_your_password`
+
+<br>
+<br>
+
+* Endpoint: `/signup`
   * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
+* Endpoint: `/signin`
   * Returns a JSON object with xyz in it.
+* Endpoint: `/books`
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* To run tests locally run the following command `npm test`
+* Tests can also be viewed in the travis link above
+* The router tests check that users can sign in and sign up
+* The middleware tests checks authentication credentials.
 
 #### UML
-Link to an image of the UML for your application and response to events
+
+![](./1_14_uml.JPG)
