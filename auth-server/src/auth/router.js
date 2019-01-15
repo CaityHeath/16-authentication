@@ -9,16 +9,16 @@ const auth = require('./middleware.js');
 authRouter.post('/signup', (req, res, next) => {
   let user = new User(req.body);
   user.save()
-    .then( (user) => {
-      req.token = user.generateToken();
-      req.user = user;
+    .then( (account) => {
+      req.token = account.generateToken();
+      req.account = account;
       res.set('token', req.token);
       res.cookie('auth', req.token);
       res.send(req.token);
     }).catch(next);
 });
 
-authRouter.get('/signin', auth, (req, res, next) => {
+authRouter.post('/signin', auth, (req, res, next) => {
   res.cookie('auth', req.token);
   res.send(req.token);
 });

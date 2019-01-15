@@ -1,12 +1,12 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
+![CF](http://i.imgur.com/7v5ASc8.png)
 =================================================
 
-## Project Name
+## Authentication 
 
-### Author: Student/Group Name
+### Author: Caity Heath and Tanner Seramur 
 
 ### Links and Resources
-* [repo](http://xyz.com)
+* [repo](https://github.com/CaityHeath/16-authentication)
 * [travis](http://xyz.com)
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
